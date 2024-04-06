@@ -1,0 +1,32 @@
+[workspace]
+
+members = [
+    "lcd1602a", "naive_stuff",
+]
+resolver = "2"
+
+#[workspace.dependencies]
+#cortex-m = "*"
+#cortex-m-rt = "*"
+#cortex-m-semihosting = "*"
+#panic-halt = "*"
+#nb = "1.1.0"
+#embedded-hal = "1.0.0"
+##
+#[workspace.dependencies.stm32f1xx-hal]
+#version = "0.10.0"
+#features = ["stm32f103", "rt"]
+
+[profile.release]
+codegen-units = 1
+debug = true
+lto = true
+
+#[[bin]]
+#name = "app"
+#path = "src/main.rs"
+
+#[[bin]]
+#name = "stm32f103c8t6"
+#test = false
+#bench = false
